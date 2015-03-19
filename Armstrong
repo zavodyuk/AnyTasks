@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Armstrong
+{
+  public static void main(String[] args)
+  {
+  int a = 100;
+  int step = 3;// степень
+    while(a<999){
+      int b = a/10;//15
+      int c = b*10;//150
+      int d =a-c;// третье число
+      int e =b/10;//первое число
+      int g = e*10;//10
+      int h = b-g;//второе число 
+      double res1 = Math.pow(e,step);
+      double res2= Math.pow(h,step);
+      double res3 = Math.pow(d,step);
+      int res = (int)(res1+res2+res3);
+      boolean f = res==a;
+        if (f){
+          System.out.println(a);
+        }
+      a++;
+    }
+  }
+}
